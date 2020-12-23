@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>关于</title>
+    <!-- 格式化样式表 -->
+    <link rel="stylesheet" href="/css/none.css">
+    <!-- 通用css文件 -->
+    <link rel="stylesheet" href="/css/unite.css">
+    <!-- 引入首页样式 -->
+    <link rel="stylesheet" href="/css/about.css">
+    <!-- 字体文件 -->
+    <link rel="stylesheet" href="/font/iconfont.css">
+    <!-- 引入移动端开发（自适应）js文件 -->
+    <script src="/js/flex.js"></script>
+</head>
+
+<body>
+    <!-- 头部/logo -->
+    <header>
+        <div class="w-box">
+            <div>我已经诞生</div>
+            <div class="time"></div>
+        </div>
+        
+    </header>
+    <!-- 内容 -->
+    <!-- 联系方式等 -->
+    <div class="content">
+        <div class="qq">
+            <img src="/Image/qq.png" alt="">
+            <span>欢迎加入~</span>
+        </div>
+        <!-- 作者信息 -->
+        <div class="box">
+            <p>作者</p>
+            <span class="t">童</span>
+            <span class="z">周晓梵</span>
+
+        </div>
+        <!-- 创建日期 ，介绍-->
+        <div class="Introduction">
+            <div>建立日期：2020.04.27</div>
+            <span>简介：阿斯顿克拉金克拉机房的卡拉的房间里尽快啊实打实的阿达阿斯顿阿达阿达阿达阿达阿达按时大大阿达阿达阿达大</span>
+        </div>
+    </div>
+    <!-- 底栏 -->
+    <footer>
+        <!-- 首页 -->
+        <div>
+            <a href="/index.html ">
+                <i class="iconfont icon-shouye3 index " id="selected "></i>
+            </a>
+        </div>
+
+
+        <!-- 关闭发布按钮 -->
+        <div class="release ">
+            <a href="/release.html ">
+                <i class="iconfont icon-jiahao "></i>
+            </a>
+
+        </div>
+
+        <!-- 关于 -->
+        <div>
+            <a href="/about.html ">
+                <i class="iconfont icon-jianjie about "></i>
+            </a>
+        </div>
+
+    </footer>
+
+
+<script type="text/javascript">
+    let header = document.getElementsByTagName('header')[0];
+    let timeEle = header.getElementsByClassName('time')[0];
+    function getTime(){
+
+        let time = new Date();
+        let year = time.getFullYear() - 2020,
+            month = time.getMonth() + 1 - 4,
+            hours = time.getHours(),
+            minutes = time.getMinutes(),
+            second = time.getSeconds();
+        year = year > 0 ? year * 365 : 0;
+        month = month * 31;
+        timeEle.innerHTML = `${year+month-27} 天  ${hours} 时 ${minutes} 分 ${second} 秒 `;
+        
+    }
+
+    setInterval(getTime,1000);
+
+</script>
+</body>
+
+</html>

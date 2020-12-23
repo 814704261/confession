@@ -1,0 +1,251 @@
+﻿/* 头部logo/招呼语 */
+
+header .logo p {
+    font-size: 0.96rem;
+    color: #525679;
+    margin-top: 1.053rem;
+}
+
+header {
+    min-height: 5rem;
+}
+
+header .logo span {
+    font-size: 0.48rem;
+    color: #d1d5dd;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+
+/* 搜索部分 */
+
+header .search input {
+    width: 6rem;
+    height: 1.2rem;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    color: rgb(230, 228, 228);
+    line-height: 1.2rem;
+    float: left;
+    margin-top: 0.4rem;
+}
+
+header .search button {
+    border: none;
+    background-color: #f9984f;
+    width: 1.613rem;
+    height: 1.2rem;
+    border-radius: 0.3rem;
+    margin-top: -0.1rem;
+    display: block;
+    float: right;
+    margin-top: 0.39rem;
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+header .search button i {
+    font-size: 0.7rem;
+    color: white;
+}
+
+
+/* 分类部分 */
+
+header .sort {
+    display: block;
+    margin-top: 0.6rem;
+    float: left;
+    margin-bottom: 0.3rem;
+}
+
+header .sort li {
+    width: 1.6rem;
+    height: 0.72rem;
+    background-color: #fdd99e;
+    float: left;
+    margin-right: 0.53rem;
+    text-align: center;
+    line-height: 0.72rem;
+    font-size: 0.48rem;
+    border-radius: 0.25rem;
+    color: #fba417;
+}
+
+header .sort #g {
+    margin-right: 0;
+}
+
+header .sort .girl {
+    background-color: #fccee2;
+    color: #faa3c9;
+}
+
+header .sort .man {
+    background-color: #e3e6f2;
+    color: #a8b8f9;
+}
+
+header .sort .anonymous {
+    background-color: #fdb98d;
+    color: #fe7822;
+}
+
+@keyframes sortdh {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* 选中的分类块类名 */
+
+header .sort .selected {
+    background-color: #bdd9fc;
+    color: #7eb6fc;
+    animation-name: sortdh;
+    animation-duration: 0.2s;
+    animation-play-state: paused;
+}
+
+
+/* 内容区域 */
+
+.content .card {
+    width: 80%;
+    min-height: 3rem;
+    max-height: 11rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5%;
+    margin-bottom: 0.6rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .card .contenthead {
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.3rem;
+    /* background-color: yellow; */
+    box-sizing: border-box;
+}
+
+.content .card .avatar {
+    width: 1.06rem;
+    height: 1.06rem;
+    border-radius: 50%;
+    display: block;
+    float: left;
+}
+
+.content .card .name-sch {
+    float: left;
+    margin-left: 0.25rem;
+    position: relative;
+    top: 0rem;
+}
+
+.content .card .id {
+    display: inline-block;
+    font-size: 0.4rem;
+    font-weight: bold;
+}
+
+.content .card .hospital {
+    font-size: 0.3rem;
+    color: #ccc;
+    display: block;
+}
+
+.content .card .good {
+    max-width: 1.7rem;
+    min-width: 0.5rem;
+    height: 0.5rem;
+    float: right;
+    margin-top: 0.1rem
+}
+
+.content .card .good i {
+    display: inline-block;
+    font-size: 0.6rem;
+    color: #ccc;
+    float: left;
+}
+
+
+/* 点后 */
+
+.content .card .good .yes {
+    font-size: 0.6rem;
+    color: #f87d65;
+    display: inline-block;
+    float: left;
+    animation-name: sortdh;
+    animation-duration: 0.2s;
+    animation-play-state: paused;
+}
+
+.content .card .good span {
+    display: block;
+    font-size: 0.35rem;
+    color: rgb(122, 120, 120);
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+    float: left;
+}
+
+.content .card .contents {
+    max-height: 10rem;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    padding-bottom: 0.25rem;
+}
+
+.content .card .title {
+    font-size: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content .card .words {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.2rem;
+    position: relative;
+}
+
+.content .card span {
+    max-height: 4rem;
+    display: block;
+    font-size: 0.35rem;
+    line-height: 0.515rem;
+    color: rgb(146, 146, 146);
+	word-break: break-all;
+}
+
+.content .card .allcontent {
+    -webkit-tap-highlight-color: rgba(218, 112, 214, 0);
+}
+
+.content .card .cardimg {
+    margin-top: 0.3rem;
+    margin-left: -0.3rem;
+    font-size: 0;
+}
+
+.content .card .cardimg>img {
+    width: 105%;
+    height: 100%;
+}

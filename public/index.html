@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>首页</title>
+    <!-- 格式化样式表 -->
+    <link rel="stylesheet" href="/css/none.css">
+    <!-- 通用css文件 -->
+    <link rel="stylesheet" href="/css/unite.css">
+    <!-- 引入首页样式 -->
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- 字体文件 -->
+    <link rel="stylesheet" href="/font/iconfont.css">
+
+    <!-- 引入移动端开发（自适应）js文件 -->
+    <script src="/js/flex.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- 招呼/欢迎(logo) -->
+        <div class="logo">
+            <p>Hello</p>
+            <span>Welcome to the comfession wall</span>
+        </div>
+
+        <!-- 搜索部分 -->
+        <div class="search">
+            <input type="text" placeholder="Search" class="clearfix">
+            <button class="clearfix"><i class="iconfont icon-ziyuan24"></i></button>
+        </div>
+
+        <!-- 分类部分 -->
+        <ul class="sort">
+            <li class="selected" data-sort="recommend">推荐</li>
+            <li class="anonymous" data-sort="anonymous">匿名</li>
+            <li class="man" data-sort="man">男生</li>
+            <li class="girl" id="g" data-sort="girl">女生</li>
+        </ul>
+    </header>
+    <div class="content">
+
+
+
+    </div>
+
+    <!-- 底栏 -->
+    <footer>
+        <!-- 首页 -->
+        <div>
+            <a href="/index.html">
+                <i class="iconfont icon-shouye3 index" id="selected"></i>
+            </a>
+        </div>
+
+
+        <!-- 关闭发布按钮 -->
+        <div class="release">
+            <a href="/release.html">
+                <i class="iconfont icon-jiahao"></i>
+            </a>
+        </div>
+
+        <!-- 关于 -->
+        <div>
+            <a href="/about.html">
+                <i class="iconfont icon-jianjie about"></i>
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="/js/home.js"></script>
+
+</body>
+
+</html>

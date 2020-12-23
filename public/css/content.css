@@ -1,0 +1,261 @@
+﻿html,
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* 头部 */
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    position: relative;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    position: relative;
+}
+
+.blessing {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    position: relative;
+}
+
+header .headlogo {
+    float: left;
+}
+
+header .headlogo>img {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+
+header .id {
+    float: left;
+    margin-top: 0.1rem;
+    color: #ccc;
+    font-size: 0.35rem;
+    margin-left: 0.2rem;
+}
+
+header .id span {
+    display: block;
+    margin-top: 0.2rem;
+}
+
+header .id h2 {
+    color: black;
+    font-size: 0.45rem;
+    font-weight: 700;
+}
+
+header .heartbeat {
+    color: white;
+    font-size: 0.35rem;
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+}
+
+header .heartbeat>div {
+    display: inline-block;
+    width: 1.4rem;
+    height: 0.7rem;
+    background-color: #e3e6f2;
+    color: #a8b8f9;
+    border-radius: 0.2rem;
+    text-align: center;
+    line-height: 0.7rem;
+}
+
+header .heartbeat>i {
+    margin-top: 0.2rem;
+    display: inline-block;
+    margin: 0 0.2rem;
+    color: #f87d65;
+    animation-name: xddh;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    position: relative;
+    top: 0.1rem;
+}
+
+@keyframes xddh {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* 男女切换改变类名即可 */
+
+header .heartbeat .nv {
+    background-color: #fccee2;
+    color: #faa3c9;
+}
+
+
+/* 标题 */
+
+.content .title {
+    width: 100%;
+    font-size: 0.6rem;
+}
+
+
+/* 内容 */
+
+.content .scontent {
+    margin-top: 0.3rem;
+    font-size: 0.4rem;
+    line-height: 0.6rem;
+    word-wrap: break-word;
+}
+
+
+/* 图片 */
+
+.content .picture {
+    width: 100%;
+    overflow: hidden;
+}
+
+.content .picture>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+
+/* 祝福区 */
+
+.blessing {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 10%;
+}
+
+.blessing .btitle {
+    color: #f87d65;
+}
+
+.blessing .btitle h2 {
+    font-size: 0.6rem;
+    font-weight: 700;
+    float: left;
+    margin-left: 0.1rem;
+}
+
+.blessing .btitle .good {
+    float: right;
+    margin-right: 0.1rem;
+}
+
+.blessing .btitle .good span {
+    display: inline-block;
+    color: rgb(116, 113, 113);
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
+
+.blessing .btitle .good i {
+    font-size: 0.6rem;
+}
+
+
+/* 没点的时候  */
+
+.blessing .btitle .line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #f87d65;
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    margin-top: 0.2rem;
+}
+
+.blessing .comment {
+    width: 100%;
+    float: left;
+    margin-top: 0.3rem;
+    font-size: 0.4rem;
+    padding: 0.3rem;
+    box-sizing: border-box;
+}
+
+.blessing .comment span {
+    display: block;
+    padding: 0.3rem;
+    line-height: 0.5rem;
+    margin-top: 0.2rem;
+    background: #f87d65;
+    border-radius: 0.5rem;
+}
+
+.blessing .comment em {
+    background: rgb(250, 179, 153);
+    border-radius: 0.5rem;
+    margin-top: 0.2rem;
+    display: block;
+    text-align: center;
+}
+
+.but {
+    width: 1.3rem;
+    height: 2.6rem;
+    position: fixed;
+    right: -0.38rem;
+    bottom: 4rem;
+    z-index: 9999;
+}
+
+.but>a {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    font-size: 0.2rem;
+    background-color: #a8b8f9;
+    opacity: .5;
+    text-align: center;
+    line-height: 0.8rem;
+    color: white;
+    margin-top: 0.2rem;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+#top {
+    height: 0rem;
+    width: 100%;
+}
+
+.content-title {
+    height: 1.5rem;
+    background-color: pink;
+    line-height: 1.5rem;
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}

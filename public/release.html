@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>发布</title>
+    <!-- 格式化样式表 -->
+    <link rel="stylesheet" href="/css/none.css">
+    <!-- 通用css文件 -->
+    <link rel="stylesheet" href="/css/unite.css">
+    <!-- 引入首页样式 -->
+    <link rel="stylesheet" href="/css/release.css">
+    <!-- 字体文件 -->
+    <link rel="stylesheet" href="/font/iconfont.css">
+    <!-- 引入移动端开发（自适应）js文件 -->
+    <script src="/js/flex.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="title">
+            <h2>发表你的心声吧！</h2>
+            <button id="submit">
+                <i class="iconfont icon-ic_send_px"></i>
+            </button>
+        </div>
+    </header>
+    <div class="voice content">
+        <!-- 标题区 -->
+        <div class="headline">
+            <input type="text" id="title" placeholder="请输入标题" maxlength="10">
+        </div>
+
+        <!-- 选项区 -->
+        <div class="chosen">
+            <div class="taname">
+                <span>ta的名字</span>
+                <input type="text" id="taName" maxlength="4">
+            </div>
+            <!-- 匿名 -->
+            <div class="incognito">
+                <span>是否匿名</span>
+                <div class="whether">
+                    <label class="anonymous">
+                        <input type="radio" id="anonymous" name="anonymous" checked value="yes">
+                        <span class="box"></span>
+     
+                        
+                    </label>
+
+                    <label class="anonymous">
+                        <input type="radio" name="anonymous" value="no" id="nobox">
+                        <span class="box"></span>
+                      
+                        
+                    </label>
+                </div>
+            </div>
+            <!-- 你的名字 -->
+            <div class="youname">
+                <span>你的名字</span>
+                <input type="text" id="yourName" maxlength="4">
+            </div>
+            <!-- 你的性别 -->
+            <div class="chosengender">
+                <span>你的性别</span>
+                <div class="sex">
+                    <label class="gender">
+                        <input type="radio" id="gender" name="gender" value="man"  checked>
+                        <span class="genderbox"></span>
+                    </label>
+
+                    <label class="gender">
+                        <input type="radio" name="gender" value="girl" id="girl">
+                        <span class="genderbox"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容/文章区域 -->
+        <div class="essay">
+            <textarea id="section" name="essay" cols="30" rows="10" class="smallcontent" placeholder="请输入你想说的话..." maxlength="1000"></textarea>
+        </div>
+
+        <div class="school">
+            <input type="text" id="school" placeholder="你的学校" maxlength="10">
+        </div>
+
+        <!-- 图片区 -->
+        <div class="picture">
+            <div class="upload-btn">
+                <input type="file" id="file" accept="image/*">
+                <div class="simg">
+                    <i class="iconfont icon-jiahao"></i>
+                </div>
+                <span>第一张会变成卡片图片哦！</span>
+            </div>
+
+            <!-- <div style="width: 100%;height: 100%;">
+                <img src="/Image/image.png" alt="" style="width: 100%;height: 100%;">
+            </div> -->
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <footer>
+        <!-- 首页 -->
+        <div>
+            <a href="/index.html">
+                <i class="iconfont icon-shouye3 index"></i>
+            </a>
+        </div>
+
+
+        <!-- 关闭发布按钮 -->
+        <div class="release">
+            <i class="iconfont icon-jiahao"></i>
+        </div>
+
+        <!-- 关于 -->
+        <div>
+            <a href="/about.html">
+                <i class="iconfont icon-jianjie about"></i>
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="/js/submit.js"></script>
+    <script src="/js/assembly.js"></script>
+</body>
+
+</html>
+
+</html>

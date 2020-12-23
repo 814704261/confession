@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>内容详情</title>
+    <!-- 格式化样式表 -->
+    <link rel="stylesheet" href="/css/none.css">
+    <!-- 引入首页样式 -->
+    <link rel="stylesheet" href="/css/content.css">
+    <!-- 字体文件 -->
+    <link rel="stylesheet" href="/font/iconfont.css">
+    <!-- 引入移动端开发（自适应）js文件 -->
+    <script src="/js/flex.js"></script>
+</head>
+
+
+<body>
+    <!-- 回到顶部锚点 -->
+    <div id="top"></div>
+    <div class="content-title">
+        内容详情
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <div class="headlogo">
+            <img src="{{ avatar }}" alt="">
+        </div>
+        <div class="id">
+            {{ if anonymous }}
+            <h2>匿名</h2>
+            <span>{{school}}</span> {{ else }}
+            <h2>{{ yourName }}</h2>
+            <span>{{ school }}</span> {{ /if }}
+        </div>
+        <!-- 心动 -->
+        <div class="heartbeat">
+            <div class="nv">{{ if anonymous }} 匿名 {{ else }} {{ yourName }} {{ /if }} </div>
+            <i class="iconfont icon-aixin"></i>
+            <div>{{ taName }}</div>
+        </div>
+    </header>
+
+    <!-- 内容区域 -->
+    <div class="content">
+        <!-- 标题 -->
+        <h2 class="title">{{ title }}</h2>
+        <!-- 内容区 -->
+        <div class="scontent">
+            {{ section }}
+        </div>
+        <!-- 图片 -->
+        <div class="picture">
+            {{ each img }}
+            <img src="{{ $value }}" alt="" style="font-size: 0;">
+            {{ /each }}
+        </div>
+    </div>
+
+    <!-- 祝福区/评论区 -->
+
+    <div style="width: 100%;height: 40px;margin:0 auto;text-align: center;position: fixed;bottom: 10px;z-index: 100">
+        <input type="text" style="width:70%;vertical-align: middle;border: none;background: rgba(148, 148, 148, .5);border-radius: 0.5rem;z-index: 100;font-size: 16px;height: 0.8rem;text-indent: 0.2rem;" maxlength="20" class="addcom" placeholder="请输入评论">
+        <button style="width:15%;height: 0.8rem;color: rgb(124, 124, 124); background: rgba(148, 148, 148, 0.5);border: none;border-radius: 0.5rem;vertical-align: middle;" class="combtn" data-id="{{ loveId }}">提交</button>
+    </div>
+
+    <div class="blessing">
+        <div class="btitle">
+            <h2>祝福区</h2>
+            <!-- 赞 -->
+            <div class="good">
+                <i class="iconfont icon-aixin" id="yes"></i>
+                <span>{{ good }}</span>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="comment">
+            {{ each comment }} <span>{{ $value.content }}<em>{{ $value.date }}</em></em></span> {{ /each }}
+        </div>
+    </div>
+    <!-- 按钮 -->
+    <div class="but">
+        <a class="return">
+            <i class="iconfont icon-tuihou"></i>
+        </a>
+        <a href="#top" class="top" style="display: none;">
+            <i class="iconfont icon-huidaodingbu"></i>
+        </a>
+    </div>
+    <script>
+        let add = document.querySelector('.addcom');
+        let btn = document.querySelector('.combtn');
+        let comment = document.querySelector('.comment');
+        btn.onclick = function() {
+            if (add.value.trim() == '' || add.value.trim().length < 1) {
+                alert('看来你是来捣乱的');
+                return;
+            }
+            let xhr = new XMLHttpRequest();
+            xhr.open('post', '/comment');
+            xhr.setRequestHeader('content-type', 'application/json');
+            xhr.send(JSON.stringify({
+                comment: add.value,
+                time: time(),
+                loveId: btn.getAttribute('data-id')
+            }));
+            xhr.onload = function() {
+                let {
+                    state
+                } = JSON.parse(xhr.responseText);
+                if (state) {
+                    let span = document.createElement('span');
+                    span.innerHTML = add.value;
+                    // comment.append(span);
+                    comment.insertBefore(span, comment.firstElementChild);
+                    add.value = '';
+                    return;
+                }
+                alert('网络不佳，请稍后再试');
+            }
+        };
+
+        function time() {
+            let date = new Date();
+            return date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日' + date.getHours() + '时' + date.getMinutes() + '分' + date.getSeconds() + '秒';
+        }
+
+
+        // 置顶等按键
+        // 返回上一页
+        var returnbut = document.querySelector('.return');
+        returnbut.addEventListener('click', back)
+
+        // 回到顶部按键
+
+        function back() {
+            history.back();
+        }
+        var topbut = document.querySelector('.top');
+        document.addEventListener('scroll', function() {
+            if (!(document.documentElement.scrollTop == 0)) {
+                topbut.style.display = 'block';
+            } else {
+                topbut.style.display = 'none';
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>

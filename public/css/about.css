@@ -1,0 +1,105 @@
+
+
+header {
+    background-color: rgb(255, 255, 255);
+    height: 5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0.2rem;
+    overflow: hidden;
+}
+
+.content .qq {
+    display: block;
+    background-color: white;
+    height: 3rem;
+    line-height: 0.8rem;
+    font-size: 0.42rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+.content .qq img {
+    width: 3rem;
+    height: 100%;
+}
+
+.content .qq span {
+    position: relative;
+    top: -1.4rem;
+    left: 1rem;
+}
+
+.content .box p {
+    width: 1.5rem;
+    padding: 0.1rem;
+    border-radius: 0.2rem;
+    color: white;
+    font-size: 0.5rem;
+    background-color: turquoise;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    text-align: center;
+}
+
+.content .box span {
+    display: block;
+    font-size: 0.45rem;
+    border-radius: 0.2rem;
+    width: 1.5rem;
+    height: 0.5rem;
+    padding: 0.1rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    line-height: 0.5rem;
+}
+
+.t {
+    background-color: #fccee2;
+    color: #faa3c9;
+    float: left;
+}
+
+.z {
+    float: right;
+    background-color: #e3e6f2;
+    color: #a8b8f9;
+}
+
+.Introduction {
+    width: 88%;
+    height: 3.2rem;
+    background-color: white;
+    margin-top: 1.3rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+.Introduction div {
+    width: 100%;
+    font-size: 0.4rem;
+}
+
+.Introduction span {
+    width: 100%;
+    font-size: 0.4rem;
+}
+header .w-box{
+    width: 100%;
+    height: 20%;
+    margin: 3rem,auto;
+    text-align: center;
+    margin-top:20%;
+}
+header .w-box .time{
+    margin-top: 0.2rem;
+}
